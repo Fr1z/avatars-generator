@@ -80,7 +80,9 @@ export default class AvatarForm extends React.Component<Props> {
         </option>
       ))
       const value = optionContext.getValue(option.key)!
-      console.log(option.key + ' is ' + value)
+
+      // console.log(option.key + ' is ' + value)
+
       return (
         <OptionSelect
           key={option.key}

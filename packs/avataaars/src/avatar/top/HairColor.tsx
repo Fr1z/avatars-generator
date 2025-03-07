@@ -26,17 +26,17 @@ function makeColor(name: string, color: string) {
   anyComponent.optionValue = name
   return anyComponent
 }
-const Auburn = makeColor('Ramati', '#A55728')
-const Black = makeColor('Neri', '#2C1B18')
-const Blonde = makeColor('Biondi', '#B58143')
-const BlondeGolden = makeColor('Biondi Dorati', '#D6B370')
-const Brown = makeColor('Marroni', '#724133')
-const BrownDark = makeColor('Marrone Scuro', '#4A312C')
+const Auburn = makeColor('Castano Rame', '#A55728')
+const Black = makeColor('Nero', '#2C1B18')
+const Blonde = makeColor('Biondo', '#B58143')
+const BlondeGolden = makeColor('Biondo Dorato', '#D6B370')
+const Brown = makeColor('Castano', '#724133')
+const BrownDark = makeColor('Castano Scuro', '#4A312C')
 const PastelPink = makeColor('Rosa Pastello', '#F59797')
 const Blue = makeColor('Blu', '#000fdb')
 const Platinum = makeColor('Platino', '#ECDCBF')
 const Red = makeColor('Rossi', '#C93305')
-const SilverGray = makeColor('Argentati', '#E8E1E1')
+const SilverGray = makeColor('Bianco/Argento', '#E8E1E1')
 
 export default class HairColor extends React.Component<Props> {
   render() {

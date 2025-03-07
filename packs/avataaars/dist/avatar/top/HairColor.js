@@ -35,17 +35,17 @@ function makeColor(name, color) {
     anyComponent.optionValue = name;
     return anyComponent;
 }
-var Auburn = makeColor('Ramati', '#A55728');
-var Black = makeColor('Neri', '#2C1B18');
-var Blonde = makeColor('Biondi', '#B58143');
-var BlondeGolden = makeColor('Biondi Dorati', '#D6B370');
-var Brown = makeColor('Marroni', '#724133');
-var BrownDark = makeColor('Marrone Scuro', '#4A312C');
+var Auburn = makeColor('Castano Rame', '#A55728');
+var Black = makeColor('Nero', '#2C1B18');
+var Blonde = makeColor('Biondo', '#B58143');
+var BlondeGolden = makeColor('Biondo Dorato', '#D6B370');
+var Brown = makeColor('Castano', '#724133');
+var BrownDark = makeColor('Castano Scuro', '#4A312C');
 var PastelPink = makeColor('Rosa Pastello', '#F59797');
 var Blue = makeColor('Blu', '#000fdb');
 var Platinum = makeColor('Platino', '#ECDCBF');
 var Red = makeColor('Rossi', '#C93305');
-var SilverGray = makeColor('Argentati', '#E8E1E1');
+var SilverGray = makeColor('Bianco/Argento', '#E8E1E1');
 var HairColor = /** @class */ (function (_super) {
     __extends(HairColor, _super);
     function HairColor() {

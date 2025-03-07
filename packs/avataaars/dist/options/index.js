@@ -42,7 +42,7 @@ exports.ClotheColorOption = new Option_1.default({
 });
 exports.GraphicOption = new Option_1.default({
     key: 'graphicType',
-    label: '↳ Graphic',
+    label: '↳ Disegno',
 });
 exports.EyesOption = new Option_1.default({
     key: 'eyeType',

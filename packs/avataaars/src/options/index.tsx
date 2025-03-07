@@ -46,7 +46,7 @@ export const ClotheColorOption = new Option({
 
 export const GraphicOption = new Option({
   key: 'graphicType',
-  label: '↳ Graphic',
+  label: '↳ Disegno',
 })
 
 export const EyesOption = new Option({

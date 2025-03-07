@@ -1,6 +1,7 @@
 ## Avataaars generator
 
 Avataaars generator is a simple web-based app for generating avatars developed by [Fang-Pen Lin](https://twitter.com/fangpenlin), the original avatar is designed by [Pablo Stanley](https://twitter.com/pablostanley), the Sketch library can be [found here](http://www.avataaars.com/).
+Project based and integrated from https://github.com/fangpenlin/avataaars
 
 You can see it here: http://getavataaars.com
 
@@ -17,6 +18,8 @@ yarn install --force
 yarn start
 
 ```
+
+Remember to set PUBLIC_URL if needed
 
 ### React component
 
