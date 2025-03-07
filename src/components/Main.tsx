@@ -95,20 +95,20 @@ export class Main extends React.Component<Props, State> {
   render() {
     const { avatarStyle } = this.props
     const { displayComponentCode, displayComponentImg } = this.state
-    const title = 'Avataaars Generator - Generate your own avataaars!'
+    const title = 'Avataaars Generator - Genera il tuo Avatar!'
     const imageURL = process.env.REACT_APP_IMG_RENDERER_URL + location.search
     return (
       <main role='main'>
         <header className='header clearfix'>
           <h2 style={{ color: '#6A39D7' }}>
-            avataaars generator
+            Personalizza il tuo Avatar
             <Button
               type='submit'
               variant='secondary'
               style={{ marginLeft: '1rem' }}
               onClick={this.onRandom}
               className='pull-right'>
-              <i className='fa fa-random' /> Random
+              <i className='fa fa-random' /> A caso
             </Button>
           </h2>
         </header>
@@ -121,11 +121,6 @@ export class Main extends React.Component<Props, State> {
             property='og:description'
             content='Avataaars Generator is a free online tool for generating your own avatar'
           />
-          <meta name='twitter:card' content='photo' />
-          <meta name='twitter:site' content='Avataaars Generator' />
-          <meta name='twitter:title' content={title} />
-          <meta name='twitter:image' content={imageURL} />
-          <meta name='twitter:url' content={document.location.href} />
         </Helmet>
         <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
           <Avatar ref={this.onAvatarRef} avatarStyle={avatarStyle} />

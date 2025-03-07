@@ -4,14 +4,25 @@ Avataaars generator is a simple web-based app for generating avatars developed b
 
 You can see it here: http://getavataaars.com
 
-### Run the server
+### Run the server and build assets
 
-To run the web app locally for development, you can run
+To test the edits run
 
 ```bash
+cd packs/avataraars
+yarn build
+cd ../../
+yarn
+yarn install --force
 yarn start
+
 ```
 
 ### React component
 
-Besides generating avatars with this generator, you can also add avatar to your React app with our [React component](https://github.com/fangpenlin/avataaars).
+Besides generating avatars with this generator, you can also add avatar to your React app with our [React component]
+
+### Variations from forked project
+_Italian Translation
+_Hashed configuration
+_Vomit removed

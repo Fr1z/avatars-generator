@@ -516,10 +516,8 @@ autoprefixer@^6.3.1:
     postcss "^5.2.16"
     postcss-value-parser "^3.2.3"
 
-avataaars@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/avataaars/-/avataaars-2.0.0.tgz#7b45331f5e10ba1308ab6a06d7aa3dcd7832fa00"
-  integrity sha512-VBS14dAvTe1l/HEwSoR5LArV7OqXgbhksBCS3CZZLIOQfv+oM3yVgy0d5QKz/KYqNMmS8emSzD9znlrOhbg2fA==
+"avataaars@file:packs/avataaars":
+  version "1.0.0"
   dependencies:
     lodash ">=4.17.21"
     prop-types "^15.7.2"

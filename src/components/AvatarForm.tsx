@@ -16,16 +16,6 @@ interface SelectProps {
   onChange?: (value: string) => void
 }
 
-// ref: https://stackoverflow.com/a/1714899/25077
-const serializeQuery = function (obj: any) {
-  const str = []
-  for (const p in obj) {
-    if (obj.hasOwnProperty(p)) {
-      str.push(encodeURIComponent(p) + '=' + encodeURIComponent(obj[p]))
-    }
-  }
-  return str.join('&')
-}
 
 class OptionSelect extends React.Component<SelectProps> {
   render() {
@@ -90,6 +80,7 @@ export default class AvatarForm extends React.Component<Props> {
         </option>
       ))
       const value = optionContext.getValue(option.key)!
+      console.log(option.key + ' is ' + value)
       return (
         <OptionSelect
           key={option.key}
@@ -176,22 +167,7 @@ export default class AvatarForm extends React.Component<Props> {
               {displayingImg ? 'Hide <img>' : 'Show <img>'}
             </Button>
             <div style={{ marginTop: '10px' }}>
-              <iframe
-                src={
-                  'https://platform.twitter.com/widgets/tweet_button.html?' +
-                  serializeQuery({
-                    text: 'I just created my avataaars here 😆',
-                    url: document.location.href,
-                    hashtags: 'avataaars,avatar',
-                    size: 'l',
-                    lang: 'en',
-                  })
-                }
-                width='140'
-                height='28'
-                title='Twitter Tweet Button'
-                style={{ border: 0, overflow: 'hidden' }}
-              />
+              :D
             </div>
           </Col>
         </FormGroup>
