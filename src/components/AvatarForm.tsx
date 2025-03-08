@@ -169,7 +169,7 @@ export default class AvatarForm extends React.Component<Props> {
               {displayingImg ? 'Hide <img>' : 'Show <img>'}
             </Button>
             <div style={{ marginTop: '10px' }}>
-              :D
+              Do you like plants too?
             </div>
           </Col>
         </FormGroup>

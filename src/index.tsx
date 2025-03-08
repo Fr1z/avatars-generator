@@ -8,7 +8,7 @@ import App from './components/App'
 import Renderer from './components/Renderer'
 import history from './history'
 import registerServiceWorker from './registerServiceWorker'
-import { Avatar, AvatarStyle } from 'avataaars'
+import Avatar from 'avataaars'
 
 const params = new URL(document.location.href).searchParams
 
@@ -16,42 +16,50 @@ const params = new URL(document.location.href).searchParams
 // Find all div elements with class "avatar"
 const avatarElements = document.querySelectorAll('.avatar');
 
-// Per ogni elemento, monta il componente React
-avatarElements.forEach((element) => {
-  // data attribute extraction
-  const props = {
-    topType: element.getAttribute('data-top-type') || 'ShortHairShortWaved',
-    accessoriesType: 'Blank',
-    facialHairType: 'Blank',
-    clotheType: 'BlazerShirt',
-    eyeType: 'Predefinito',
-    eyebrowType: 'UpDownNatural',
-    mouthType: 'Predefinito',
-    skinColor: 'Chiara'
-  };
-  // Render avatars divs
-  ReactDOM.render((
-    <Avatar
-      style={{
-        position: 'absolute',
-        left: '0',
-        right: '0',
-        bottom: '0',
-        top: '0',
-        width: '100%',
-        height: '100%',
-      }}
-      avatarStyle={AvatarStyle.Transparent}
-      {...props}
-    />
-  ), element);
-});
+
 
 if (params.get('__render__') !== '1') {
   // link the history used in our app to url-query so it can update the URL with it.
   configureUrlQuery({ history })
 
   ReactDOM.render(<App />, document.getElementById('root') as HTMLElement)
+
+  // Per ogni elemento, monta il componente React
+  avatarElements.forEach((element) => {
+    // data attribute extraction
+
+    const dimension = element.getAttribute('width') || '50px'
+
+    const props = {
+      topType: element.getAttribute('top-type') || 'ShortHairShortWaved',
+      accessoriesType: 'Blank',
+      facialHairType: 'Blank',
+      clotheType: 'BlazerShirt',
+      eyeType: 'Predefinito',
+      eyebrowType: 'UpDownNatural',
+      mouthType: 'Predefinito',
+      skinColor: 'Chiara'
+    }
+
+    // Render avatars divs
+    ReactDOM.render((
+      <Avatar
+        style={{
+          position: 'relative',
+          left: '0',
+          right: '0',
+          bottom: '0',
+          top: '0',
+          width: dimension,
+          height: dimension,
+        }}
+        avatarStyle='transparent'
+        className=''
+        {...props}
+      />
+    ), element);
+  })
+
   registerServiceWorker()
   console.log("APP Mode")
   // server rendering mode
